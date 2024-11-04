@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+import React  from 'react'
 import Image from 'next/image'
 import  RegisterForm  from '@/components/forms/RegisterForm'
 import { getUser } from '@/lib/actions/patient.actions'

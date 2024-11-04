@@ -28,7 +28,7 @@ export enum FormFieldType {
 }
 
 interface CustomProps {
-  control: Control<any>;
+  control: Control<any>; // @ts-ignore
   name: string;
   label?: string;
   placeholder?: string;
@@ -38,11 +38,11 @@ interface CustomProps {
   dateFormat?: string;
   showTimeSelect?: boolean;
   children?: React.ReactNode;
-  renderSkeleton?: (field: any) => React.ReactNode;
+  renderSkeleton?: (field: any) => React.ReactNode; // @ts-ignore
   fieldType: FormFieldType;
 }
 
-const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
+const RenderInput = ({ field, props }: { field: any;  props: CustomProps }) => { // @ts-ignore
   switch (props.fieldType) {
     case FormFieldType.INPUT:
       return (
@@ -119,7 +119,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
             <ReactDatePicker
               showTimeSelect={props.showTimeSelect ?? false}
               selected={field.value}
-              onChange={(date: any) => field.onChange(date)}
+              onChange={(date: any) => field.onChange(date)} // @ts-ignore
               timeInputLabel="Time:"
               dateFormat={props.dateFormat ?? "MM/dd/yyyy"}
               wrapperClassName="date-picker"
