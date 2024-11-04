@@ -9,8 +9,8 @@ const AdminPage = async () => {
   const appointments = await getRecentAppointmentList();
   return (
     <div className="mx-auto flex max-w-7xl flex-col space-y-14">
-      <header className='admin-header'>
-      <Link href="/" className="cursor-pointer">
+      <header className="admin-header">
+        <Link href="/" className="cursor-pointer">
           <Image
             src="/assets/icons/logo-full.svg"
             height={32}
@@ -32,7 +32,7 @@ const AdminPage = async () => {
         </section>
 
         <section className="admin-stat">
-        <StatCard
+          <StatCard
             type="appointments"
             count={appointments.scheduledCount}
             label="Scheduled appointments"
@@ -54,7 +54,7 @@ const AdminPage = async () => {
         <DataTable columns={columns} data={appointments.documents} />
       </main>
     </div>
-  )
-}
+  );
+};
 
 export default AdminPage;

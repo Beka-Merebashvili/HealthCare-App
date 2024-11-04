@@ -6,10 +6,8 @@ import Image from "next/image";
 import { Doctors } from "@/constants";
 import { formatDateTime } from "@/lib/utils";
 import { Appointment } from "@/types/appwrite.types";
-import {StatusBadge} from "../StatusBadge";
+import { StatusBadge } from "../StatusBadge";
 import { AppointmentModal } from "../AppointmentModal";
-
-
 
 export const columns: ColumnDef<Appointment>[] = [
   {
