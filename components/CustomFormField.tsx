@@ -38,11 +38,11 @@ interface CustomProps {
   dateFormat?: string;
   showTimeSelect?: boolean;
   children?: React.ReactNode;
-  renderSkeleton?: (field: any) => React.ReactNode; // @ts-ignore
+  renderSkeleton?: (field: any) => React.ReactNode;
   fieldType: FormFieldType;
 }
 
-const RenderInput = ({ field, props }: { field: any;  props: CustomProps }) => { // @ts-ignore
+const RenderInput = ({ field, props }: { field: any;  props: CustomProps }) => { 
   switch (props.fieldType) {
     case FormFieldType.INPUT:
       return (
@@ -119,7 +119,7 @@ const RenderInput = ({ field, props }: { field: any;  props: CustomProps }) => {
             <ReactDatePicker
               showTimeSelect={props.showTimeSelect ?? false}
               selected={field.value}
-              onChange={(date: any) => field.onChange(date)} // @ts-ignore
+              onChange={(date: any) => field.onChange(date)} 
               timeInputLabel="Time:"
               dateFormat={props.dateFormat ?? "MM/dd/yyyy"}
               wrapperClassName="date-picker"
